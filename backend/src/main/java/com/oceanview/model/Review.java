@@ -9,23 +9,30 @@ public class Review {
     private String roomId; // FK to Room
     private int rating;
     private String feedback;
+    private int isActive; // 1 for active, 0 for deactive
     private Date createdAt;
     private Date updatedAt;
 
-    public Review() {}
+    public Review() {
+        this.isActive = 1; // Default to active
+    }
 
-    public Review(String id, String reservationId, String guestId, String roomId, int rating, String feedback, Date createdAt, Date updatedAt) {
+    public Review(String id, String reservationId, String guestId, String roomId, int rating, String feedback, int isActive, Date createdAt, Date updatedAt) {
         this.id = id;
         this.reservationId = reservationId;
         this.guestId = guestId;
         this.roomId = roomId;
         this.rating = rating;
         this.feedback = feedback;
+        this.isActive = isActive;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
 
     // Getters and Setters
+    public int getIsActive() { return isActive; }
+    public void setIsActive(int isActive) { this.isActive = isActive; }
+
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
