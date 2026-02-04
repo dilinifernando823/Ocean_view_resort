@@ -24,9 +24,9 @@
                 <i class="fas fa-users"></i> User Accounts
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-calendar-check"></i> All Reservations
+        <li class="${pageContext.request.requestURI.contains('reservations.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/reservations">
+                <i class="fas fa-calendar-alt"></i> Reservations
             </a>
         </li>
         <li>
