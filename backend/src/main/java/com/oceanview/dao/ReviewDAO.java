@@ -30,19 +30,33 @@ public class ReviewDAO extends BaseDAO<Review> {
     public Review findById(String id) {
         Document doc = collection.find(Filters.eq("_id", new ObjectId(id))).first();
         if (doc == null) return null;
-        Review review = gson.fromJson(doc.toJson(), Review.class);
-        review.setId(doc.getObjectId("_id").toString());
-        return review;
+        return mapDocumentToReview(doc);
     }
 
     public List<Review> findAll() {
         List<Review> reviews = new ArrayList<>();
         FindIterable<Document> docs = collection.find();
         for (Document doc : docs) {
-            Review review = gson.fromJson(doc.toJson(), Review.class);
-            review.setId(doc.getObjectId("_id").toString());
-            reviews.add(review);
+            reviews.add(mapDocumentToReview(doc));
         }
         return reviews;
+    }
+
+    private Review mapDocumentToReview(Document doc) {
+        Review review = new Review();
+        review.setId(doc.getObjectId("_id").toString());
+        review.setReservationId(doc.getString("reservationId"));
+        review.setGuestId(doc.getString("guestId"));
+        review.setRoomId(doc.getString("roomId"));
+        review.setRating(doc.getInteger("rating", 0));
+        review.setFeedback(doc.getString("feedback"));
+        review.setIsActive(doc.getInteger("isActive", 1));
+        review.setCreatedAt(doc.getDate("createdAt"));
+        review.setUpdatedAt(doc.getDate("updatedAt"));
+        return review;
+    }
+
+    public void delete(String id) {
+        collection.deleteOne(Filters.eq("_id", new ObjectId(id)));
     }
 }

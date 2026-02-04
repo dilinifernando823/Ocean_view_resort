@@ -34,8 +34,8 @@
                 <i class="fas fa-file-invoice-dollar"></i> Invoices
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="${pageContext.request.requestURI.contains('reviews.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/reviews">
                 <i class="fas fa-star"></i> Reviews
             </a>
         </li>
