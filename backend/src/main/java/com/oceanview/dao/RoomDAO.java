@@ -45,4 +45,8 @@ public class RoomDAO extends BaseDAO<Room> {
         }
         return rooms;
     }
+
+    public void delete(String id) {
+        collection.deleteOne(Filters.eq("_id", new ObjectId(id)));
+    }
 }

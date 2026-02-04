@@ -9,8 +9,8 @@
                 <i class="fas fa-home"></i> Dashboard
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="${pageContext.request.requestURI.contains('rooms.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/rooms">
                 <i class="fas fa-bed"></i> Manage Rooms
             </a>
         </li>
