@@ -61,4 +61,8 @@ public class UserDAO extends BaseDAO<User> {
         user.setId(doc.getObjectId("_id").toString());
         return user;
     }
+
+    public void delete(String id) {
+        collection.deleteOne(Filters.eq("_id", new ObjectId(id)));
+    }
 }
