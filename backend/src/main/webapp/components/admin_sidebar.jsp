@@ -19,8 +19,8 @@
                 <i class="fas fa-tags"></i> Room Categories
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="${pageContext.request.requestURI.contains('users.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/users">
                 <i class="fas fa-users"></i> User Accounts
             </a>
         </li>
