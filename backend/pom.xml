@@ -67,11 +67,18 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- JSON Support (Optional but recommended for API) -->
+    <!-- JSON Support -->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.10.1</version>
+    </dependency>
+
+    <!-- Email Support -->
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.2</version>
     </dependency>
   </dependencies>
 
