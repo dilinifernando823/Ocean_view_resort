@@ -45,4 +45,20 @@ public class UserDAO extends BaseDAO<User> {
         }
         return users;
     }
+
+    public User findByUsername(String username) {
+        Document doc = collection.find(Filters.eq("username", username)).first();
+        if (doc == null) return null;
+        User user = gson.fromJson(doc.toJson(), User.class);
+        user.setId(doc.getObjectId("_id").toString());
+        return user;
+    }
+
+    public User findByEmail(String email) {
+        Document doc = collection.find(Filters.eq("email", email)).first();
+        if (doc == null) return null;
+        User user = gson.fromJson(doc.toJson(), User.class);
+        user.setId(doc.getObjectId("_id").toString());
+        return user;
+    }
 }
