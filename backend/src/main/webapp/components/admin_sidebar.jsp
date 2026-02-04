@@ -14,8 +14,8 @@
                 <i class="fas fa-bed"></i> Manage Rooms
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="${pageContext.request.requestURI.contains('room-categories.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/categories">
                 <i class="fas fa-tags"></i> Room Categories
             </a>
         </li>
