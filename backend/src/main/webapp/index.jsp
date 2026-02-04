@@ -5,71 +5,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilini Ocean View Resort</title>
-    <!-- Tailwind CSS Output (assumed to be built into static/css) -->
-    <link href="${pageContext.request.contextPath}/static/css/output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Fallback for demo -->
+    <title>Ocean View Resort | Paradise Awaits</title>
 </head>
-<body class="bg-blue-50">
-    <header class="bg-blue-900 text-white p-6 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Dilini Ocean View Resort</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#" class="hover:text-blue-300">Home</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Rooms</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Services</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Contact</a></li>
-                </ul>
-            </nav>
+<body>
+    <jsp:include page="/components/header.jsp" />
+
+    <section class="hero">
+        <h1>Escape to Serenity</h1>
+        <p>Your luxury getaway at Dilini Ocean View Resort offers stunning oceanfront views and world-class service.</p>
+        <div class="hero-btns">
+            <a href="${pageContext.request.contextPath}/rooms.jsp" class="btn btn-primary">Book Your Stay</a>
+            <a href="${pageContext.request.contextPath}/about.jsp" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Learn More</a>
         </div>
-    </header>
+    </section>
 
-    <main class="container mx-auto mt-10 p-6">
-        <section class="bg-white rounded-xl shadow-2xl p-8 text-center">
-            <h2 class="text-4xl font-extrabold text-blue-900 mb-4">Welcome to Paradise</h2>
-            <p class="text-gray-600 text-lg mb-6">Experience the ultimate luxury at Dilini Ocean View Resort.</p>
-            
-            <div id="db-status" class="inline-block px-6 py-3 rounded-full font-semibold bg-gray-200 text-gray-700">
-                Checking Database Connection...
-            </div>
-            
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 bg-blue-100 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Oceanfront Views</h3>
-                    <p class="text-gray-700">Wake up to the sound of waves and stunning ocean views.</p>
-                </div>
-                <div class="p-6 bg-blue-100 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Luxury Suites</h3>
-                    <p class="text-gray-700">Modern rooms designed for your comfort and relaxation.</p>
-                </div>
-                <div class="p-6 bg-blue-100 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2 text-blue-800">Fine Dining</h3>
-                    <p class="text-gray-700">Exquisite local and international cuisine prepared by top chefs.</p>
+    <section class="section">
+        <h2 class="section-title">Our Premier Accommodations</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <h3>Deluxe Ocean Suite</h3>
+                    <p>Panoramic views of the coastline with private balcony and luxury amenities.</p>
+                    <a href="#" class="btn btn-primary" style="display:inline-block; margin-top:1rem;">View Details</a>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <h3>Pool Terrace Villa</h3>
+                    <p>Direct access to our infinity pool with spacious living area and tropical gardens.</p>
+                    <a href="#" class="btn btn-primary" style="display:inline-block; margin-top:1rem;">View Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4df85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-content">
+                    <h3>Sunset Garden Room</h3>
+                    <p>Quiet and peaceful rooms surrounded by lush tropical greenery.</p>
+                    <a href="#" class="btn btn-primary" style="display:inline-block; margin-top:1rem;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // Check DB Connection status via API
-        fetch('${pageContext.request.contextPath}/api/db-check')
-            .then(response => response.json())
-            .then(data => {
-                const statusDiv = document.getElementById('db-status');
-                if (data.status === 'success') {
-                    statusDiv.innerText = 'Database Connected Successfully';
-                    statusDiv.className = 'inline-block px-6 py-3 rounded-full font-semibold bg-green-500 text-white';
-                } else {
-                    statusDiv.innerText = 'Database Connection Failed';
-                    statusDiv.className = 'inline-block px-6 py-3 rounded-full font-semibold bg-red-500 text-white';
-                }
-            })
-            .catch(error => {
-                const statusDiv = document.getElementById('db-status');
-                statusDiv.innerText = 'Status: ' + error.message;
-                statusDiv.className = 'inline-block px-6 py-3 rounded-full font-semibold bg-yellow-500 text-white';
-            });
-    </script>
+    <jsp:include page="/components/footer.jsp" />
 </body>
 </html>
