@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #0077be;
+  --accent-gold: #d4af37;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
