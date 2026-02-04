@@ -30,19 +30,34 @@ public class ReservationDAO extends BaseDAO<Reservation> {
     public Reservation findById(String id) {
         Document doc = collection.find(Filters.eq("_id", new ObjectId(id))).first();
         if (doc == null) return null;
-        Reservation reservation = gson.fromJson(doc.toJson(), Reservation.class);
-        reservation.setId(doc.getObjectId("_id").toString());
-        return reservation;
+        return mapDocumentToReservation(doc);
     }
 
     public List<Reservation> findAll() {
         List<Reservation> reservations = new ArrayList<>();
-        FindIterable<Document> docs = collection.find();
+        FindIterable<Document> docs = collection.find().sort(new Document("createdAt", -1));
         for (Document doc : docs) {
-            Reservation reservation = gson.fromJson(doc.toJson(), Reservation.class);
-            reservation.setId(doc.getObjectId("_id").toString());
-            reservations.add(reservation);
+            reservations.add(mapDocumentToReservation(doc));
         }
         return reservations;
+    }
+
+    private Reservation mapDocumentToReservation(Document doc) {
+        Reservation res = new Reservation();
+        res.setId(doc.getObjectId("_id").toString());
+        res.setGuestId(doc.getString("guestId"));
+        res.setRoomId(doc.getString("roomId"));
+        res.setCheckInDate(doc.getDate("checkInDate"));
+        res.setCheckOutDate(doc.getDate("checkOutDate"));
+        res.setTotalAmount(doc.getDouble("totalAmount"));
+        res.setStatus(doc.getString("status")); // pending, accepted, rejected, cancelled
+        res.setPaymentStatus(doc.getString("paymentStatus")); // unpaid, paid
+        res.setCreatedAt(doc.getDate("createdAt"));
+        res.setUpdatedAt(doc.getDate("updatedAt"));
+        return res;
+    }
+
+    public void delete(String id) {
+        collection.deleteOne(Filters.eq("_id", new ObjectId(id)));
     }
 }

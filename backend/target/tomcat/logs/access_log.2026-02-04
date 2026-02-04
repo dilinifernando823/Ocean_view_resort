@@ -247,3 +247,13 @@
 0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:01:35 +0530] "GET /admin/reviews HTTP/1.1" 500 3489 http-bio-8085-exec-10 5
 0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:01:38 +0530] "GET /admin/reviews HTTP/1.1" 500 3489 http-bio-8085-exec-8 5
 0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:01:56 +0530] "GET /admin/reviews HTTP/1.1" 200 3537 http-bio-8085-exec-2 8
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:00 +0530] "GET /admin/reviews HTTP/1.1" 200 3558 http-bio-8085-exec-1 960
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:00 +0530] "GET /assets/css/main.css HTTP/1.1" 304 - http-bio-8085-exec-3 5
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:00 +0530] "GET /assets/css/dashboard.css HTTP/1.1" 304 - http-bio-8085-exec-2 5
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:04 +0530] "GET /admin/reservations HTTP/1.1" 200 2779 http-bio-8085-exec-5 287
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:07 +0530] "GET /admin/users HTTP/1.1" 200 7220 http-bio-8085-exec-6 37
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:08 +0530] "GET /admin/categories HTTP/1.1" 200 4544 http-bio-8085-exec-7 19
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:08 +0530] "GET /assets/uploads/categories/89d5d242-1067-481c-a21d-eacbe9f014c1_Whisk_c68ef30d9e6198ba9444b2ff6fa26debdr.jpeg HTTP/1.1" 304 - http-bio-8085-exec-8 5
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:09 +0530] "GET /admin/rooms HTTP/1.1" 200 5685 http-bio-8085-exec-9 26
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:09 +0530] "GET /assets/uploads/rooms/b55436c5-5ebe-4561-b583-e06c7346a6e9_Whisk_fe6c79fa370f716b1ea4f6d65c15e097dr.jpeg HTTP/1.1" 304 - http-bio-8085-exec-10 6
+0:0:0:0:0:0:0:1 - - [04/Feb/2026:21:54:10 +0530] "GET /admin/dashboard.jsp HTTP/1.1" 200 6329 http-bio-8085-exec-10 13
