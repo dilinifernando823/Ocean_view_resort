@@ -7,10 +7,10 @@ import java.util.Properties;
 
 public class EmailUtil {
     // These should ideally be in a config file or env variables
-    private static final String SMTP_HOST = "smtp.gmail.com";
-    private static final String SMTP_PORT = "587";
-    private static final String USERNAME = "your-email@gmail.com"; // User must replace this
-    private static final String PASSWORD = "your-app-password";     // User must replace this
+    private static final String SMTP_HOST = "sandbox.smtp.mailtrap.io";
+    private static final String SMTP_PORT = "2525";
+    private static final String USERNAME = "23e575503bd17b";
+    private static final String PASSWORD = "6f1b21f8e60876";
 
     public static void sendEmail(String to, String subject, String body) {
         Properties props = new Properties();
