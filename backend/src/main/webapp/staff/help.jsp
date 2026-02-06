@@ -17,48 +17,76 @@
     <div class="main-content">
         <header class="dashboard-header">
             <h2 style="font-weight: 700; color: #333;">Staff Help Center</h2>
-            <div style="color: #666;">Guidelines and procedures for Ocean View Resort operations</div>
+            <div style="color: #666;">Usage guide for Ocean View Resort management tools</div>
         </header>
 
         <div class="dashboard-container">
-            <!-- Housekeeping Section -->
+            <!-- Room Cleaning Section -->
             <div style="background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-broom"></i> Housekeeping Procedures
+                    <i class="fas fa-broom"></i> Room Cleaning Management
                 </h3>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                     <div>
-                        <h4 style="margin-bottom: 0.8rem; font-weight: 600;">Standard Room Cleaning</h4>
-                        <ol style="padding-left: 1.2rem; line-height: 1.6; color: #555;">
-                            <li>Wait for guest check-out or check "Please Clean" status.</li>
-                            <li>Strip all bed linens and towels.</li>
-                            <li>Sanitize all high-touch surfaces (doorknobs, remotes).</li>
-                            <li>Replenish amenities (soap, shampoo, water).</li>
-                            <li>Final vacuum and mop.</li>
-                        </ol>
+                        <h4 style="margin-bottom: 0.8rem; font-weight: 600;">Understanding Statuses</h4>
+                        <ul style="padding-left: 1.2rem; line-height: 1.6; color: #555;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="badge badge-success">Occupied</span> 
+                                Room is currently booked and paid for (includes both Accepted and Pending/Paid reservations). Do not enter unless requested.
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="badge" style="background: #eee; color: #333;">Vacant</span> 
+                                Room is empty but marked as 'Dirty' in the system. Needs cleaning.
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="badge badge-success" style="background: #e8f5e9; color: #2e7d32;">Available</span> 
+                                Room is clean and ready for new guests.
+                            </li>
+                        </ul>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.8rem; font-weight: 600;">Status Codes</h4>
+                        <h4 style="margin-bottom: 0.8rem; font-weight: 600;">Actions</h4>
                         <ul style="padding-left: 1.2rem; line-height: 1.6; color: #555;">
-                            <li><span class="badge badge-success">Occupied</span>: Guest currently in room. Only clean if requested.</li>
-                            <li><span class="badge badge-danger">Dirty</span>: Guest checked out. Needs full turnover.</li>
-                            <li><span class="badge">Ready</span>: Inspected and ready for new guest.</li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Mark Ready</strong>: Click this button after you have finished cleaning a Vacant room. This updates the status to 'Available' instantly in the database.
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Mark Dirty</strong>: Use this if an Available room needs maintenance or was used unexpectedly. It resets the status to 'Dirty'.
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Guest Services Section -->
-            <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-concierge-bell"></i> Guest Services
-                </h3>
-                
-                <p style="margin-bottom: 1rem; color: #555;">Always greet guests with a smile and "Ayubowan". Report any maintenance issues immediately to the administration panel.</p>
-                
-                <div style="background: #f9f9f9; padding: 1rem; border-left: 4px solid var(--primary-color); border-radius: 4px;">
-                    <strong>Emergency Contact:</strong> Admin Manager - Ext 100
+            <!-- Dashboard & Guests Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-chart-line"></i> Dashboard Overview
+                    </h3>
+                    <p style="color: #555; line-height: 1.6; margin-bottom: 1rem;">
+                        The <strong>Overview</strong> page provides real-time statistics:
+                    </p>
+                    <ul style="padding-left: 1.2rem; line-height: 1.6; color: #555;">
+                        <li><strong>Today's Check-ins:</strong> Count of reservations starting today.</li>
+                        <li><strong>Dirty Rooms:</strong> Total number of rooms needing attention.</li>
+                        <li><strong>Arrival List:</strong> Shows guest names and room numbers for instant preparation.</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-users"></i> Guest List
+                    </h3>
+                    <p style="color: #555; line-height: 1.6; margin-bottom: 1rem;">
+                        Use the <strong>Guest List</strong> page to find registered customer details.
+                    </p>
+                    <ul style="padding-left: 1.2rem; line-height: 1.6; color: #555;">
+                        <li>View full names and contact info (Email, Phone).</li>
+                        <li>Verify registered addresses.</li>
+                        <li>Help guests with account-related inquiries.</li>
+                    </ul>
                 </div>
             </div>
         </div>

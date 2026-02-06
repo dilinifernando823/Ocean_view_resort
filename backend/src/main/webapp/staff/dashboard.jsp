@@ -22,7 +22,7 @@
     <div class="main-content">
         <header class="dashboard-header">
             <div class="header-left">
-                <h2 style="font-weight: 700; color: #333;">Operations Console</h2>
+                <h2 style="font-weight: 700; color: #333;">Staff Operations Console</h2>
             </div>
             <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
                 <span style="color: #666;">Staff User: <strong>${sessionScope.user.username}</strong></span>
