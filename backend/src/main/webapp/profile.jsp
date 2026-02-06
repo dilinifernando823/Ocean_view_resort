@@ -96,6 +96,20 @@
                                                     <i class="fas fa-sticky-note"></i> "${res.notes}"
                                                 </div>
                                             </c:if>
+                                            
+                                            <%-- Add Review Button Logic --%>
+                                            <c:if test="${(res.status == 'accepted' || res.status == 'completed') && empty reviewMap[res.id]}">
+                                                <div style="margin-top: 1rem;">
+                                                    <a href="${pageContext.request.contextPath}/add-review?reservationId=${res.id}" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: #fffbe6; color: #f59e0b; border: 1px solid #f59e0b; border-radius: 8px;">
+                                                        <i class="fas fa-star"></i> Write a Review
+                                                    </a>
+                                                </div>
+                                            </c:if>
+                                            <c:if test="${not empty reviewMap[res.id]}">
+                                                 <div style="margin-top: 1rem; color: #f59e0b; font-size: 0.85rem; font-weight: 600;">
+                                                    <i class="fas fa-check-circle"></i> Thanks for your review!
+                                                </div>
+                                            </c:if>
                                         </div>
                                         <div style="display: flex; justify-content: space-between; align-items: center;">
                                             <div style="font-weight: 700; color: var(--primary-color);">LKR ${res.totalAmount}</div>

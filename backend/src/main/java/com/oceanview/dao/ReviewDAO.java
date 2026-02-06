@@ -42,6 +42,12 @@ public class ReviewDAO extends BaseDAO<Review> {
         return reviews;
     }
 
+    public Review findByReservationId(String reservationId) {
+        Document doc = collection.find(Filters.eq("reservationId", reservationId)).first();
+        if (doc == null) return null;
+        return mapDocumentToReview(doc);
+    }
+
     private Review mapDocumentToReview(Document doc) {
         Review review = new Review();
         review.setId(doc.getObjectId("_id").toString());
@@ -51,9 +57,43 @@ public class ReviewDAO extends BaseDAO<Review> {
         review.setRating(doc.getInteger("rating", 0));
         review.setFeedback(doc.getString("feedback"));
         review.setIsActive(doc.getInteger("isActive", 1));
-        review.setCreatedAt(doc.getDate("createdAt"));
-        review.setUpdatedAt(doc.getDate("updatedAt"));
+        review.setCreatedAt(getDateSafely(doc, "createdAt"));
+        review.setUpdatedAt(getDateSafely(doc, "updatedAt"));
         return review;
+    }
+
+    private java.util.Date getDateSafely(Document doc, String key) {
+        Object val = doc.get(key);
+        if (val == null) return null;
+        if (val instanceof java.util.Date) {
+            return (java.util.Date) val;
+        }
+        if (val instanceof String) {
+            String dateStr = (String) val;
+            
+            // Clean up the date string
+            dateStr = dateStr.replaceAll("[\\h\\v]", " "); 
+            dateStr = dateStr.replace("?", " ");
+            dateStr = dateStr.replaceAll("\\s+", " ").trim();
+
+            String[] formats = {
+                "yyyy-MM-dd'T'HH:mm:ss.SSSX",
+                "MMM d, yyyy h:mm:ss a",
+                "MMM d, yyyy, h:mm:ss a",
+                "MMM dd, yyyy, h:mm:ss a",
+                "yyyy-MM-dd",
+                "yyyy-MM-dd HH:mm:ss"
+            };
+            
+            for (String fmt : formats) {
+                try {
+                    return new java.text.SimpleDateFormat(fmt, java.util.Locale.US).parse(dateStr);
+                } catch (java.text.ParseException e) {
+                    // continue
+                }
+            }
+        }
+        return null;
     }
 
     public void delete(String id) {
