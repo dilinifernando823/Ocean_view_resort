@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "698601643052d93d46472caf"
+  },
+  "reservationId": "698600fd3052d93d46472cae",
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f0e522877d506abff95c",
+  "rating": 5,
+  "feedback": "Amazing stay! The ocean view room was stunning and very clean. Staff were friendly and helpful throughout our visit. Highly recommended.",
+  "isActive": 1,
+  "createdAt": "Feb 6, 2026, 8:27:40 PM",
+  "updatedAt": "Feb 6, 2026, 8:27:40 PM"
+},
+{
+  "_id": {
+    "$oid": "6986016d3052d93d46472cb0"
+  },
+  "reservationId": "698600db3052d93d46472cac",
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f1d922877d506abff95f",
+  "rating": 4,
+  "feedback": "Great location and comfortable rooms. The city view room was perfect for my business trip. Breakfast could be improved, but overall a good experience.",
+  "isActive": 1,
+  "createdAt": "Feb 6, 2026, 8:27:49 PM",
+  "updatedAt": "Feb 6, 2026, 8:27:49 PM"
+},
+{
+  "_id": {
+    "$oid": "698601753052d93d46472cb1"
+  },
+  "reservationId": "698600bf3052d93d46472caa",
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f31722877d506abff962",
+  "rating": 4,
+  "feedback": "We stayed in the Family Suite and it was spacious and well-maintained. Perfect for traveling with kids. Will definitely come back again!",
+  "isActive": 1,
+  "createdAt": "Feb 6, 2026, 8:27:57 PM",
+  "updatedAt": "Feb 6, 2026, 8:27:57 PM"
+},
+{
+  "_id": {
+    "$oid": "6986017e3052d93d46472cb2"
+  },
+  "reservationId": "6986007f3052d93d46472ca8",
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f0e522877d506abff95c",
+  "rating": 5,
+  "feedback": "Peaceful environment and beautiful garden view. The room was cozy and relaxing. Value for money and great service.",
+  "isActive": 1,
+  "createdAt": "Feb 6, 2026, 8:28:06 PM",
+  "updatedAt": "Feb 6, 2026, 8:28:06 PM"
+}]

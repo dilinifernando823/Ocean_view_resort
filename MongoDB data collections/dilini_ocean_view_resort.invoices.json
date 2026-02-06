@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "698587093afe195338e022e4"
+  },
+  "reservationId": "69856bb85241e5297dc4a8ae",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770358537074",
+  "amount": 164314,
+  "invoicedAt": "Feb 6, 2026, 11:45:37 AM",
+  "createdAt": "Feb 6, 2026, 11:45:37 AM",
+  "updatedAt": "Feb 6, 2026, 11:45:37 AM"
+},
+{
+  "_id": {
+    "$oid": "6985cbebf23185431bf96bac"
+  },
+  "reservationId": "69858165e8944512eaf3f946",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770376171008",
+  "amount": 5666,
+  "invoicedAt": "Feb 6, 2026, 4:39:31 PM",
+  "createdAt": "Feb 6, 2026, 4:39:31 PM",
+  "updatedAt": "Feb 6, 2026, 4:39:31 PM"
+},
+{
+  "_id": {
+    "$oid": "6986009c3052d93d46472ca9"
+  },
+  "reservationId": "6986007f3052d93d46472ca8",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770389660751",
+  "amount": 45000,
+  "invoicedAt": "Feb 6, 2026, 8:24:20 PM",
+  "createdAt": "Feb 6, 2026, 8:24:20 PM",
+  "updatedAt": "Feb 6, 2026, 8:24:20 PM"
+},
+{
+  "_id": {
+    "$oid": "698600c93052d93d46472cab"
+  },
+  "reservationId": "698600bf3052d93d46472caa",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770389705781",
+  "amount": 150000,
+  "invoicedAt": "Feb 6, 2026, 8:25:05 PM",
+  "createdAt": "Feb 6, 2026, 8:25:05 PM",
+  "updatedAt": "Feb 6, 2026, 8:25:05 PM"
+},
+{
+  "_id": {
+    "$oid": "698600e53052d93d46472cad"
+  },
+  "reservationId": "698600db3052d93d46472cac",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770389733633",
+  "amount": 25000,
+  "invoicedAt": "Feb 6, 2026, 8:25:33 PM",
+  "createdAt": "Feb 6, 2026, 8:25:33 PM",
+  "updatedAt": "Feb 6, 2026, 8:25:33 PM"
+},
+{
+  "_id": {
+    "$oid": "6986022e3052d93d46472cb3"
+  },
+  "reservationId": "698600fd3052d93d46472cae",
+  "guestId": "6983100f3ee752165054232c",
+  "invoiceNumber": "INV-1770390062617",
+  "amount": 90000,
+  "invoicedAt": "Feb 6, 2026, 8:31:02 PM",
+  "createdAt": "Feb 6, 2026, 8:31:02 PM",
+  "updatedAt": "Feb 6, 2026, 8:31:02 PM"
+}]
