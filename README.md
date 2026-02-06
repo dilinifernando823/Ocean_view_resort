@@ -51,7 +51,7 @@ Ensure you have the following installed:
 1. Start your MongoDB server.
 2. The application expects a connection string. Locate the database configuration (usually in a DAO utility class or properties file) and update it with your credentials:
    - Default: `mongodb://localhost:27017`
-   - Database Name: `oceanview_db`
+   - Database Name: `dilini_ocean_view_resort`
 
 ### 3. Clone the Project
 ```bash
