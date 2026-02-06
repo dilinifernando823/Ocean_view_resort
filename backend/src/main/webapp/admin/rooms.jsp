@@ -50,7 +50,9 @@
                                     <div style="font-size: 0.8rem; color: #666;">${room.roomName}</div>
                                 </td>
                                 <td>
-                                    <span style="font-size: 0.85rem; background: #f0f0f0; padding: 2px 8px; border-radius: 4px;">ID: ${room.categoryId}</span>
+                                    <span style="font-size: 0.85rem; background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 4px; font-weight: 500;">
+                                        ${categoryMap[room.categoryId] != null ? categoryMap[room.categoryId] : 'Uncategorized'}
+                                    </span>
                                 </td>
                                 <td style="font-weight: 600; color: #2c3e50;">
                                     Rs. ${room.pricePerNight}

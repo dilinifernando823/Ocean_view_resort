@@ -16,7 +16,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @WebServlet("/admin/rooms")
 @MultipartConfig(
@@ -55,7 +57,12 @@ public class RoomManagementServlet extends HttpServlet {
             request.getRequestDispatcher("/admin/room-form.jsp").forward(request, response);
         } else {
             List<Room> rooms = roomDAO.findAll();
+            List<RoomCategory> categories = categoryDAO.findAll();
+            Map<String, String> categoryMap = categories.stream()
+                    .collect(Collectors.toMap(RoomCategory::getId, RoomCategory::getName, (a, b) -> a));
+            
             request.setAttribute("rooms", rooms);
+            request.setAttribute("categoryMap", categoryMap);
             request.getRequestDispatcher("/admin/rooms.jsp").forward(request, response);
         }
     }
