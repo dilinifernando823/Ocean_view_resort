@@ -9,9 +9,6 @@
     <title>Ocean View Resort | Paradise Awaits</title>
 </head>
 <body>
-    <c:if test="${empty categories}">
-        <c:redirect url="/home"/>
-    </c:if>
 
     <jsp:include page="/components/header.jsp" />
 

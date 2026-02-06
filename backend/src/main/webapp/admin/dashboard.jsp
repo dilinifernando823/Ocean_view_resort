@@ -4,10 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-- Redirect if accessed directly --%>
-    <c:if test="${empty totalRooms}">
-        <c:redirect url="/admin/dashboard"/>
-    </c:if>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Ocean View Resort</title>
