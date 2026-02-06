@@ -27,7 +27,9 @@ com\oceanview\servlet\ReservationManagementServlet.class
 com\oceanview\util\EmailUtil$1.class
 com\oceanview\dao\RoomCategoryDAO.class
 com\oceanview\servlet\ReservationServlet.class
+com\oceanview\servlet\ReviewServlet.class
 com\oceanview\servlet\DBConnectionServlet.class
 com\oceanview\dao\RoomDAO.class
 com\oceanview\model\User.class
 com\oceanview\util\MongoDBConnection.class
+com\oceanview\servlet\HomeServlet.class
