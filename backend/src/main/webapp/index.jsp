@@ -9,12 +9,15 @@
     <title>Ocean View Resort | Paradise Awaits</title>
 </head>
 <body>
+    <c:if test="${empty isHomeLoaded}">
+        <c:redirect url="/home"/>
+    </c:if>
 
     <jsp:include page="/components/header.jsp" />
 
     <section class="hero">
         <h1>Escape to Serenity</h1>
-        <p>Your luxury getaway at Dilini Ocean View Resort offers stunning oceanfront views and world-class service.</p>
+        <p>Your luxury getaway at Ocean View Resort offers stunning oceanfront views and world-class service.</p>
         <div class="hero-btns">
             <a href="${pageContext.request.contextPath}/rooms" class="btn btn-primary">Book Your Stay</a>
             <a href="${pageContext.request.contextPath}/about.jsp" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Learn More</a>
@@ -22,19 +25,70 @@
     </section>
 
     <!-- Browse Room by Categories -->
-    <section class="section">
+    <section class="section" style="position: relative;">
         <h2 class="section-title">Browse by Category</h2>
         <div class="carousel-wrapper" style="position: relative; overflow: hidden; padding: 1rem 0;">
-            <div class="carousel" style="display: flex; gap: 2rem; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 1rem; -ms-overflow-style: none; scrollbar-width: none;">
-                <c:forEach items="${categories}" var="cat">
-                    <c:set var="catImg" value="${not empty cat.image ? cat.image : 'assets/img/placeholder.jpg'}" />
-                    <div class="cat-card" style="min-width: 250px; flex: 0 0 auto; text-align: center; cursor: pointer; transition: transform 0.3s;" onclick="location.href='${pageContext.request.contextPath}/rooms?category=${cat.id}'">
-                        <div style="width: 100%; height: 300px; border-radius: 20px; background-image: url('${catImg}'); background-size: cover; background-position: center; margin-bottom: 1rem; box-shadow: var(--shadow);"></div>
-                        <h3 style="color: var(--primary-color);">${cat.name}</h3>
-                    </div>
-                </c:forEach>
+            <div class="carousel-track-container" style="overflow: hidden; padding: 0 50px;">
+                <div class="carousel-track-cats" id="cat-track" style="display: flex; gap: 2rem; transition: transform 0.5s ease;">
+                    <c:forEach items="${categories}" var="cat">
+                        <c:set var="catImg" value="${not empty cat.image ? cat.image : 'assets/img/placeholder.jpg'}" />
+                        <div class="cat-card" style="min-width: 250px; flex: 0 0 calc(25% - 1.5rem); text-align: center; cursor: pointer; transition: transform 0.3s; position: relative;" onclick="location.href='${pageContext.request.contextPath}/rooms?category=${cat.id}'">
+                            <div style="width: 100%; height: 320px; border-radius: 20px; background-image: url('${catImg}'); background-size: cover; background-position: center; margin-bottom: 1rem; box-shadow: var(--shadow); transition: 0.3s;"></div>
+                            <h3 style="color: var(--primary-color); font-weight: 700;">${cat.name}</h3>
+                        </div>
+                    </c:forEach>
+                </div>
             </div>
+            
+            <!-- Navigation Buttons -->
+            <button onclick="moveCats(-1)" style="position: absolute; left: 10px; top: 175px; background: white; border: none; width: 45px; height: 45px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: var(--primary-color); transition: 0.3s;">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="moveCats(1)" style="position: absolute; right: 10px; top: 175px; background: white; border: none; width: 45px; height: 45px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; color: var(--primary-color); transition: 0.3s;">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
+        
+        <style>
+            .cat-card:hover { transform: translateY(-10px); }
+            .cat-card:hover div { box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+            @media (max-width: 1200px) { .cat-card { flex: 0 0 calc(33.33% - 1.4rem) !important; } }
+            @media (max-width: 900px) { .cat-card { flex: 0 0 calc(50% - 1rem) !important; } }
+            @media (max-width: 600px) { .cat-card { flex: 0 0 100% !important; } }
+        </style>
+        
+        <script>
+            let catIndex = 0;
+            function moveCats(dir) {
+                const track = document.getElementById('cat-track');
+                if (!track || !track.children.length) return;
+                
+                const cards = track.children;
+                const cardWidth = cards[0].offsetWidth + 32; // width + gap
+                const containerWidth = track.parentElement.offsetWidth;
+                const visibleCount = Math.floor(containerWidth / cardWidth);
+                
+                let maxIndex = cards.length - visibleCount;
+                if (maxIndex < 0) maxIndex = 0;
+                
+                catIndex += dir;
+                if (catIndex < 0) catIndex = 0;
+                if (catIndex > maxIndex) catIndex = maxIndex;
+                
+                track.style.transform = `translateX(-${catIndex * cardWidth}px)`;
+            }
+
+            // Auto-hide buttons if all cards are visible
+            window.addEventListener('load', () => {
+                const track = document.getElementById('cat-track');
+                if (!track) return;
+                const containerWidth = track.parentElement.offsetWidth;
+                const totalWidth = track.scrollWidth;
+                if (totalWidth <= containerWidth) {
+                    document.querySelectorAll('.carousel-wrapper > button').forEach(b => b.style.display = 'none');
+                }
+            });
+        </script>
     </section>
 
     <!-- Featured Rooms -->
