@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "6985ed6c22877d506abff957"
+  },
+  "name": "Deluxe Ocean View",
+  "description": "Spacious luxury room featuring a private balcony with stunning ocean views, modern furnishings, and premium amenities for a relaxing stay.",
+  "image": "assets/uploads/categories/5d3c4c16-267b-4b8c-bdea-b36eff616c36_Atlantis The Royal, Dubai_  Beach Resort & Luxury Hotel (with infinite views).jpg",
+  "createdAt": "Feb 6, 2026, 7:02:28 PM",
+  "updatedAt": "Feb 6, 2026, 7:02:28 PM"
+},
+{
+  "_id": {
+    "$oid": "6985ed8c22877d506abff958"
+  },
+  "name": "Standard City View",
+  "description": "Comfortable and affordable room offering city skyline views, ideal for business travelers and short stays.",
+  "image": "assets/uploads/categories/687f3a45-9607-491b-8512-24349e0d3be7_an apartment with a great view of the city.jpg",
+  "createdAt": "Feb 6, 2026, 7:03:00 PM",
+  "updatedAt": "Feb 6, 2026, 7:03:00 PM"
+},
+{
+  "_id": {
+    "$oid": "6985edac22877d506abff959"
+  },
+  "name": "Family Suite",
+  "description": "Large suite designed for families, including multiple beds, a separate living area, and enhanced comfort features.",
+  "image": "assets/uploads/categories/5fdee12a-1ad4-450a-bf10-6e4bcfb4a593_Elegant twin and double rooms in Medjugorje _ Medjugorje Hotel & Spa.jpg",
+  "createdAt": "Feb 6, 2026, 7:03:32 PM",
+  "updatedAt": "Feb 6, 2026, 7:03:32 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f01d22877d506abff95a"
+  },
+  "id": "6985f01d22877d506abff95a",
+  "name": "Executive Suite",
+  "description": "Premium suite with elegant interiors, work space, lounge area, and exclusive services for executive guests.",
+  "image": "assets/uploads/categories/d6f5e8d4-e1fa-4130-8931-fa81e7c19434_jhjjhjh.jpg",
+  "createdAt": "Feb 6, 2026, 7:13:57 PM",
+  "updatedAt": "Feb 6, 2026, 7:14:19 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f05522877d506abff95b"
+  },
+  "name": "Garden View Room",
+  "description": "Peaceful room overlooking lush gardens, perfect for guests seeking a calm and nature-inspired stay.",
+  "image": "assets/uploads/categories/68d890aa-fc4a-435e-8629-78373f4d42c0_download.jpg",
+  "createdAt": "Feb 6, 2026, 7:14:53 PM",
+  "updatedAt": "Feb 6, 2026, 7:14:53 PM"
+}]

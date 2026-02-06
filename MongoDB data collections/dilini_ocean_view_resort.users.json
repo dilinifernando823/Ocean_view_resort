@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6983100f3ee752165054232c"
+  },
+  "username": "Savindu",
+  "password": "11111111",
+  "role": "admin",
+  "email": "savindu147@gmail.com",
+  "address": "20/A,Tuduwamulla,Ambalangoda",
+  "phone": "+94772892789",
+  "fullName": "Savindu Manahara",
+  "nic": "200311800738",
+  "createdAt": "Feb 4, 2026, 2:53:27 PM",
+  "updatedAt": "Feb 6, 2026, 8:25:59 PM"
+}]

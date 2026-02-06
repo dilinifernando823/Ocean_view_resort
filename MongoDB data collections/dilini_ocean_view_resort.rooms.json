@@ -1,0 +1,188 @@
+[{
+  "_id": {
+    "$oid": "6985f0e522877d506abff95c"
+  },
+  "roomNumber": "101",
+  "categoryId": "6985ed6c22877d506abff957",
+  "status": "available",
+  "description": "A luxury ocean-facing room with a private balcony, modern interiors, and premium amenities for a relaxing seaside stay.",
+  "amenities": "AC, Wi-Fi, Mini Bar, King Bed, Ocean View, Balcony",
+  "pricePerNight": 45000,
+  "capacity": 2,
+  "roomName": "Ocean View Deluxe A",
+  "image1": "assets/uploads/rooms/dbdfb4d1-3cd1-4d3a-b283-973762bc823e_The Bodrum EDITION _ Boutique Luxury Bodrum Hotel.jpg",
+  "image2": "assets/uploads/rooms/a979c378-1303-43fc-83bf-d10a55e2553c_download (1).jpg",
+  "image3": "assets/uploads/rooms/3a31df60-3ed1-4655-8b6c-6f5ab8c4de91_dreamy bed room.jpg",
+  "createdAt": "Feb 6, 2026, 7:17:17 PM",
+  "updatedAt": "Feb 6, 2026, 7:17:17 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f14a22877d506abff95d"
+  },
+  "id": "6985f14a22877d506abff95d",
+  "roomNumber": "102",
+  "categoryId": "6985ed6c22877d506abff957",
+  "status": "available",
+  "description": "Elegant deluxe room offering breathtaking ocean views, ideal for couples and honeymooners.",
+  "amenities": "AC, Wi-Fi, Mini Bar, King Bed, Ocean View, Balcony",
+  "pricePerNight": 45000,
+  "capacity": 2,
+  "roomName": "Ocean View Deluxe B",
+  "image1": "assets/uploads/rooms/b54761fb-3a3d-414c-a0a8-42a988abaa80_666777.jpg",
+  "image2": "assets/uploads/rooms/80865399-cde5-41c2-9600-49b5c1bde003_55677.jpg",
+  "image3": "assets/uploads/rooms/492dcef7-03d9-4353-9317-8c76efa8bb76_7777888.jpg",
+  "createdAt": "Feb 6, 2026, 7:18:58 PM",
+  "updatedAt": "Feb 6, 2026, 7:33:13 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f17422877d506abff95e"
+  },
+  "id": "6985f17422877d506abff95e",
+  "roomNumber": "201",
+  "categoryId": "6985ed8c22877d506abff958",
+  "status": "available",
+  "description": "Comfortable city-view room designed for affordability and convenience, perfect for short stays.",
+  "amenities": "AC, Wi-Fi, Queen Bed, City View, Work Desk",
+  "pricePerNight": 25000,
+  "capacity": 2,
+  "roomName": "City View Standard A",
+  "image1": "assets/uploads/rooms/3214da56-99b4-4f2b-9e7d-d40d62335afe_Elegant Loft Bedroom with Skyline View.jpg",
+  "image2": "assets/uploads/rooms/7ed00a7c-d93a-4631-b25a-a872ccd2258e_Hestya Design Inspirations_ Fresh & Trending Interior Ideas.jpg",
+  "image3": "assets/uploads/rooms/028eba71-ab7e-49aa-8e4c-110d9066b4c7_Elegant Loft Bedroom with Skyline View (1).jpg",
+  "createdAt": "Feb 6, 2026, 7:19:40 PM",
+  "updatedAt": "Feb 6, 2026, 7:20:15 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f1d922877d506abff95f"
+  },
+  "roomNumber": "202",
+  "categoryId": "6985ed8c22877d506abff958",
+  "status": "available",
+  "description": "A modern and cozy room with city skyline views, suitable for business and leisure travelers.",
+  "amenities": "AC, Wi-Fi, Queen Bed, City View, Work Desk",
+  "pricePerNight": 25000,
+  "capacity": 2,
+  "roomName": "City View Standard B",
+  "image1": "assets/uploads/rooms/c034ed80-d0c0-4bc8-9ea3-3e3c59c3a069_Skyline Splendor - with a mesmerizing view of the city skyline from my hotel room.jpg",
+  "image2": "assets/uploads/rooms/f9dd3637-ec6b-42d8-8a53-4edc3a49853f_Skyline Serenity_ Chic New York Bedroom Inspiration.jpg",
+  "image3": "assets/uploads/rooms/df0cee98-3811-4817-a9e5-a3012367502e_A luxury penthouse.jpg",
+  "createdAt": "Feb 6, 2026, 7:21:21 PM",
+  "updatedAt": "Feb 6, 2026, 7:21:21 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f23b22877d506abff960"
+  },
+  "id": "6985f23b22877d506abff960",
+  "roomNumber": "301",
+  "categoryId": "6985edac22877d506abff959",
+  "status": "available",
+  "description": "Spacious family suite with separate living space, ideal for families seeking comfort and privacy.",
+  "amenities": "AC, Wi-Fi, King Bed, Twin Beds, Living Area, Sofa, TV",
+  "pricePerNight": 60000,
+  "capacity": 4,
+  "roomName": "Family Suite A",
+  "image1": "assets/uploads/rooms/b439a1c9-4b94-4780-a1df-e56b408042bc_77777777.jpg",
+  "image2": "assets/uploads/rooms/61c601ce-3c5c-43da-8be9-dbb8332a4955_download (2).jpg",
+  "image3": "assets/uploads/rooms/9551e5ba-3657-4e75-9663-dbaa78cc7aec_download (3).jpg",
+  "createdAt": "Feb 6, 2026, 7:22:59 PM",
+  "updatedAt": "Feb 6, 2026, 7:23:22 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f2bd22877d506abff961"
+  },
+  "id": "6985f2bd22877d506abff961",
+  "roomNumber": "302",
+  "categoryId": "6985edac22877d506abff959",
+  "status": "available",
+  "description": "Well-designed suite offering ample space and amenities to ensure a pleasant family stay.",
+  "amenities": "AC, Wi-Fi, King Bed, Twin Beds, Living Area, Sofa, TV",
+  "pricePerNight": 60000,
+  "capacity": 4,
+  "roomName": "Family Suite B",
+  "image1": "assets/uploads/rooms/37f1432d-97c6-43e9-9335-66297e90c9b8_download (4).jpg",
+  "image2": "assets/uploads/rooms/3cd324c6-ef19-4d6e-bbfb-863e0de512eb_bnj.jpg",
+  "image3": "assets/uploads/rooms/c9f68972-868f-4699-b084-3080a83c8839_download (5).jpg",
+  "createdAt": "Feb 6, 2026, 7:25:09 PM",
+  "updatedAt": "Feb 6, 2026, 7:25:31 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f31722877d506abff962"
+  },
+  "id": "6985f31722877d506abff962",
+  "roomNumber": "401",
+  "categoryId": "6985f01d22877d506abff95a",
+  "status": "available",
+  "description": "Premium executive suite with elegant interiors, ideal for business travelers and long stays.",
+  "amenities": "AC, Wi-Fi, King Bed, Lounge Area, Work Desk, Coffee Machine",
+  "pricePerNight": 75000,
+  "capacity": 2,
+  "roomName": "Executive Suite",
+  "image1": "assets/uploads/rooms/385fe439-89a0-4062-87ab-4ab78a2d339b_77777.jpg",
+  "image2": "assets/uploads/rooms/9306ebca-297a-4705-9ddb-3a8b9b941452_7777.jpg",
+  "image3": "assets/uploads/rooms/e8a49a8d-5388-4c35-b400-ea13865ce314_777.jpg",
+  "createdAt": "Feb 6, 2026, 7:26:39 PM",
+  "updatedAt": "Feb 6, 2026, 7:28:20 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f35922877d506abff963"
+  },
+  "id": "6985f35922877d506abff963",
+  "roomNumber": "402",
+  "categoryId": "6985f01d22877d506abff95a",
+  "status": "available",
+  "description": "A refined suite combining luxury and functionality for executives and professionals.",
+  "amenities": "AC, Wi-Fi, King Bed, Lounge Area, Work Desk, Coffee Machine",
+  "pricePerNight": 75000,
+  "capacity": 2,
+  "roomName": "Executive Suite B",
+  "image1": "assets/uploads/rooms/8b7513fc-858d-43c3-bab2-c1bb899c6812_666.jpg",
+  "image2": "assets/uploads/rooms/b7a3e4eb-bfd7-4d45-b105-dffc75522073_download (6).jpg",
+  "image3": "assets/uploads/rooms/890197e8-da14-43b8-8b03-36899d799cbe_Ultra-Modern Masculine Office with Panoramic Views.jpg",
+  "createdAt": "Feb 6, 2026, 7:27:45 PM",
+  "updatedAt": "Feb 6, 2026, 7:28:37 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f3cd22877d506abff964"
+  },
+  "id": "6985f3cd22877d506abff964",
+  "roomNumber": "501",
+  "categoryId": "6985f05522877d506abff95b",
+  "status": "available",
+  "description": "A calm and cozy room overlooking lush gardens, perfect for guests seeking a peaceful stay.",
+  "amenities": "AC, Wi-Fi, Queen Bed, Garden View, Balcony",
+  "pricePerNight": 30000,
+  "capacity": 2,
+  "roomName": "Garden View Room A",
+  "image1": "assets/uploads/rooms/ee6cbc34-69c7-4900-b85d-9975c136be3e_15 Forest Bedroom Ideas for a Cozy Retreat.jpg",
+  "image2": "assets/uploads/rooms/bf0252ec-7af6-4ab8-93eb-54992c21ab11_Dreamy Bedroom Ideas For Your Tropical Home.jpg",
+  "image3": "assets/uploads/rooms/27159ec5-5241-48dd-a8a2-94d370f8fa65_333.jpg",
+  "createdAt": "Feb 6, 2026, 7:29:41 PM",
+  "updatedAt": "Feb 6, 2026, 7:29:57 PM"
+},
+{
+  "_id": {
+    "$oid": "6985f41a22877d506abff965"
+  },
+  "id": "6985f41a22877d506abff965",
+  "roomNumber": "502",
+  "categoryId": "6985f05522877d506abff95b",
+  "status": "available",
+  "description": "Serene garden-view room offering natural surroundings and relaxing comfort.",
+  "amenities": "AC, Wi-Fi, Queen Bed, Garden View, Balcony",
+  "pricePerNight": 30000,
+  "capacity": 2,
+  "roomName": "Garden View Room B",
+  "image1": "assets/uploads/rooms/8051c08f-4609-4a3e-af29-454e68e23586_Japandi-Inspired Indoor Garden.jpg",
+  "image2": "assets/uploads/rooms/415d90c8-1fe5-4c60-821d-7f34a0056d3d_000000.jpg",
+  "image3": "assets/uploads/rooms/5041eee8-b59b-4a3d-bf65-62b20a74b8ea_download (7).jpg",
+  "createdAt": "Feb 6, 2026, 7:30:58 PM",
+  "updatedAt": "Feb 6, 2026, 7:31:17 PM"
+}]
