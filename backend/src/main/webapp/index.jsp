@@ -14,7 +14,7 @@
         <h1>Escape to Serenity</h1>
         <p>Your luxury getaway at Dilini Ocean View Resort offers stunning oceanfront views and world-class service.</p>
         <div class="hero-btns">
-            <a href="${pageContext.request.contextPath}/rooms.jsp" class="btn btn-primary">Book Your Stay</a>
+            <a href="${pageContext.request.contextPath}/rooms" class="btn btn-primary">Book Your Stay</a>
             <a href="${pageContext.request.contextPath}/about.jsp" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Learn More</a>
         </div>
     </section>

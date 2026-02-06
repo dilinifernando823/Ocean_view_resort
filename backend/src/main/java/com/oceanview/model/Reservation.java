@@ -12,6 +12,8 @@ public class Reservation {
     private double totalAmount;
     private String status;
     private String paymentStatus;
+    private int occupancy;
+    private String notes;
     private Date createdAt;
     private Date updatedAt;
 
@@ -43,6 +45,12 @@ public class Reservation {
 
     public String getPaymentStatus() { return paymentStatus; }
     public void setPaymentStatus(String paymentStatus) { this.paymentStatus = paymentStatus; }
+
+    public int getOccupancy() { return occupancy; }
+    public void setOccupancy(int occupancy) { this.occupancy = occupancy; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
 
     public Date getCreatedAt() { return createdAt; }
     public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }

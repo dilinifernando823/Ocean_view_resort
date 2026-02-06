@@ -20,8 +20,11 @@ public class InvoiceDAO extends BaseDAO<Invoice> {
     public void save(Invoice invoice) {
         Document doc = Document.parse(gson.toJson(invoice));
         if (invoice.getId() != null && !invoice.getId().isEmpty()) {
+            doc.remove("id");
             collection.replaceOne(Filters.eq("_id", new ObjectId(invoice.getId())), doc);
         } else {
+            doc.remove("id");
+            doc.remove("_id");
             collection.insertOne(doc);
             invoice.setId(doc.getObjectId("_id").toString());
         }

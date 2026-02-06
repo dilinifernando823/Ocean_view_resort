@@ -5,7 +5,7 @@
     <ul class="nav-links">
         <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
         <li><a href="${pageContext.request.contextPath}/about.jsp">About</a></li>
-        <li><a href="${pageContext.request.contextPath}/rooms.jsp">Rooms</a></li>
+        <li><a href="${pageContext.request.contextPath}/rooms">Rooms</a></li>
         <li><a href="${pageContext.request.contextPath}/contact.jsp">Contact</a></li>
     </ul>
     <div class="auth-icons">
@@ -19,7 +19,7 @@
                         <a href="${pageContext.request.contextPath}/staff/dashboard.jsp" title="Staff Panel"><i class="fas fa-clipboard-list"></i></a>
                     </c:when>
                     <c:otherwise>
-                        <a href="${pageContext.request.contextPath}/profile.jsp" title="Profile"><i class="fas fa-user-circle"></i></a>
+                        <a href="${pageContext.request.contextPath}/profile" title="Profile"><i class="fas fa-user-circle"></i></a>
                     </c:otherwise>
                 </c:choose>
                 <a href="${pageContext.request.contextPath}/logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
