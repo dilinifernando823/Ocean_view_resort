@@ -81,6 +81,9 @@ public class ReservationManagementServlet extends HttpServlet {
                 invoiceDAO.save(invoice);
             }
             response.sendRedirect(request.getContextPath() + "/admin/reservations?action=view&id=" + id);
+        } else if ("delete".equals(action)) {
+            reservationDAO.delete(id);
+            response.sendRedirect(request.getContextPath() + "/admin/reservations");
         } else {
             List<Reservation> reservations = reservationDAO.findAll();
             request.setAttribute("reservations", reservations);

@@ -64,9 +64,14 @@
                                     </c:choose>
                                 </td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/admin/reservations?action=view&id=${res.id}" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: #3498db; color: white;">
-                                        View Details
-                                    </a>
+                                    <div style="display: flex; gap: 0.5rem;">
+                                        <a href="${pageContext.request.contextPath}/admin/reservations?action=view&id=${res.id}" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: #3498db; color: white; display: flex; align-items: center; gap: 0.3rem;">
+                                            <i class="fas fa-eye"></i> View
+                                        </a>
+                                        <a href="${pageContext.request.contextPath}/admin/reservations?action=delete&id=${res.id}" class="btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: #e74c3c; color: white; display: flex; align-items: center; gap: 0.3rem;" onclick="return confirm('Are you sure you want to delete this reservation?')">
+                                            <i class="fas fa-trash-alt"></i> Delete
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                         </c:forEach>
