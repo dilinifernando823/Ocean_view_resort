@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header>
-    <a href="${pageContext.request.contextPath}/index.jsp" class="logo">OCEAN VIEW</a>
+    <a href="${pageContext.request.contextPath}/index.jsp" class="logo">
+        <img src="${pageContext.request.contextPath}/assets/about_header.png" alt="Ocean View Resort" style="height: 50px; width: auto; object-fit: contain;">
+    </a>
     <ul class="nav-links">
         <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
         <li><a href="${pageContext.request.contextPath}/about.jsp">About</a></li>
