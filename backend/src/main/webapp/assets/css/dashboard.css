@@ -201,3 +201,8 @@ body.dashboard-body {
     background: #f8d7da;
     color: #721c24;
 }
+
+.badge-info {
+    background: #d1ecf1;
+    color: #0c5460;
+}

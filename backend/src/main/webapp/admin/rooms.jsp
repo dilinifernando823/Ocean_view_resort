@@ -50,7 +50,9 @@
                                     <div style="font-size: 0.8rem; color: #666;">${room.roomName}</div>
                                 </td>
                                 <td>
-                                    <span style="font-size: 0.85rem; background: #f0f0f0; padding: 2px 8px; border-radius: 4px;">ID: ${room.categoryId}</span>
+                                    <span style="font-size: 0.85rem; background: #e3f2fd; color: #1976d2; padding: 4px 10px; border-radius: 4px; font-weight: 500;">
+                                        ${categoryMap[room.categoryId] != null ? categoryMap[room.categoryId] : 'Uncategorized'}
+                                    </span>
                                 </td>
                                 <td style="font-weight: 600; color: #2c3e50;">
                                     Rs. ${room.pricePerNight}
@@ -62,6 +64,9 @@
                                         </c:when>
                                         <c:when test="${room.status == 'booked'}">
                                             <span class="badge badge-warning">Booked</span>
+                                        </c:when>
+                                        <c:when test="${room.status == 'dirty'}">
+                                            <span class="badge badge-info">Dirty</span>
                                         </c:when>
                                         <c:when test="${room.status == 'maintenance'}">
                                             <span class="badge badge-danger">Maintenance</span>
