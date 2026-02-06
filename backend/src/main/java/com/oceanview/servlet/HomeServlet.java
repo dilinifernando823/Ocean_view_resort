@@ -61,6 +61,7 @@ public class HomeServlet extends HttpServlet {
             }
         }
         request.setAttribute("userMap", userMap);
+        request.setAttribute("isHomeLoaded", true);
 
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }

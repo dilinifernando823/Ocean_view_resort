@@ -15,55 +15,57 @@
             gap: 3rem;
         }
 
-        /* Carousel Styling */
-        .carousel-container {
-            position: relative;
+        /* Gallery Styling - Premium Version */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .main-image-display {
+            width: 100%;
+            height: 500px;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            height: 500px;
-            background: #000;
+            background: #eee;
         }
 
-        .carousel-track {
-            display: flex;
-            height: 100%;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
-        }
-
-        .carousel-slide img {
+        .main-image-display img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 0.3s ease;
         }
 
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.3);
-            border: none;
-            padding: 1rem;
+        .thumbnail-row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            scrollbar-width: thin;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 70px;
+            border-radius: 10px;
+            object-fit: cover;
             cursor: pointer;
-            color: white;
-            font-size: 1.5rem;
-            border-radius: 50%;
+            border: 2px solid transparent;
             transition: var(--transition);
-            z-index: 10;
+            opacity: 0.6;
         }
 
-        .carousel-btn:hover {
-            background: white;
-            color: black;
+        .thumbnail:hover {
+            opacity: 1;
         }
 
-        .btn-prev { left: 1rem; }
-        .btn-next { right: 1rem; }
+        .thumbnail.active {
+            border-color: var(--secondary-color);
+            opacity: 1;
+            box-shadow: 0 4px 10px rgba(0, 170, 255, 0.2);
+        }
 
         /* Room Info */
         .room-info h1 {
@@ -190,23 +192,29 @@
     <div class="details-page">
         <!-- Room Content -->
         <div class="content">
-            <div class="carousel-container">
-                <div class="carousel-track" id="track">
+            <div class="gallery-container">
+                <div class="main-image-display">
+                    <c:choose>
+                        <c:when test="${not empty room.image1}">
+                            <img src="${pageContext.request.contextPath}/${room.image1}" id="mainDisplayImg" alt="${room.roomName}">
+                        </c:when>
+                        <c:otherwise>
+                            <img src="${pageContext.request.contextPath}/assets/img/placeholder-room.jpg" id="mainDisplayImg" alt="Placeholder">
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+                
+                <div class="thumbnail-row">
                     <c:if test="${not empty room.image1}">
-                        <div class="carousel-slide"><img src="${pageContext.request.contextPath}/${room.image1}" alt="Room Image 1"></div>
+                        <img src="${pageContext.request.contextPath}/${room.image1}" class="thumbnail active" onclick="updateMainImage(this.src, this)">
                     </c:if>
                     <c:if test="${not empty room.image2}">
-                        <div class="carousel-slide"><img src="${pageContext.request.contextPath}/${room.image2}" alt="Room Image 2"></div>
+                        <img src="${pageContext.request.contextPath}/${room.image2}" class="thumbnail" onclick="updateMainImage(this.src, this)">
                     </c:if>
                     <c:if test="${not empty room.image3}">
-                        <div class="carousel-slide"><img src="${pageContext.request.contextPath}/${room.image3}" alt="Room Image 3"></div>
-                    </c:if>
-                    <c:if test="${empty room.image1 && empty room.image2 && empty room.image3}">
-                         <div class="carousel-slide"><img src="${pageContext.request.contextPath}/assets/img/placeholder-room.jpg" alt="Placeholder"></div>
+                        <img src="${pageContext.request.contextPath}/${room.image3}" class="thumbnail" onclick="updateMainImage(this.src, this)">
                     </c:if>
                 </div>
-                <button class="carousel-btn btn-prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-btn btn-next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
             </div>
 
             <div class="room-info" style="margin-top: 2rem;">
@@ -322,14 +330,21 @@
     </div>
 
     <script>
-        let currentSlide = 0;
-        const track = document.getElementById('track');
-        const slides = document.querySelectorAll('.carousel-slide');
-        
-        function moveSlide(direction) {
-            if (!track || slides.length === 0) return;
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        function updateMainImage(src, thumbElement) {
+            const mainImg = document.getElementById('mainDisplayImg');
+            if (!mainImg) return;
+            
+            // Fade effect
+            mainImg.style.opacity = '0.4';
+            
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                thumbElement.classList.add('active');
+            }, 200);
         }
 
         // Set min date for date inputs to today

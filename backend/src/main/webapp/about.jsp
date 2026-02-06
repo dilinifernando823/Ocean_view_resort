@@ -17,7 +17,7 @@
         <div class="container" style="max-width: 1000px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
                 <div>
-                    <img src="${pageContext.request.contextPath}/assets/img/about-img.jpg" alt="About Ocean View" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="${pageContext.request.contextPath}/assets/about.png" alt="About Ocean View" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
                 <div>
                     <h2 class="section-title" style="text-align: left;">A Sanctuary by the Sea</h2>

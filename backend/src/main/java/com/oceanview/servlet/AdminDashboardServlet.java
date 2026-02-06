@@ -114,6 +114,7 @@ public class AdminDashboardServlet extends HttpServlet {
         
         request.setAttribute("chartLabels", chartLabels);
         request.setAttribute("chartData", chartData);
+        request.setAttribute("isAdminDashboardLoaded", true);
 
         request.getRequestDispatcher("/admin/dashboard.jsp").forward(request, response);
     }

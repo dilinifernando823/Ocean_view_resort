@@ -85,6 +85,7 @@ public class StaffDashboardServlet extends HttpServlet {
                 .filter(r -> "accepted".equals(r.getStatus()))
                 .collect(Collectors.toList());
         request.setAttribute("todaysArrivals", todaysArrivals);
+        request.setAttribute("isStaffDashboardLoaded", true);
 
         request.getRequestDispatcher("/staff/dashboard.jsp").forward(request, response);
     }
