@@ -6,7 +6,7 @@ public class Room {
     private String id;
     private String roomNumber;
     private String categoryId; // FK to RoomCategory
-    private String status; // available, unavailable, maintenance, booked
+    private String status; // available, unavailable, maintenance, booked, dirty
     private String description;
     private String amenities; // comma separated list
     private double pricePerNight;
