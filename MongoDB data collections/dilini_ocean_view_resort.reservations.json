@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6986007f3052d93d46472ca8"
+  },
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f0e522877d506abff95c",
+  "checkInDate": "Feb 6, 2026, 12:00:00 AM",
+  "checkOutDate": "Feb 7, 2026, 12:00:00 AM",
+  "totalAmount": 45000,
+  "status": "completed",
+  "paymentStatus": "paid",
+  "occupancy": 2,
+  "notes": "Pet have",
+  "createdAt": "Feb 6, 2026, 8:23:51 PM",
+  "updatedAt": "Feb 6, 2026, 8:24:20 PM"
+},
+{
+  "_id": {
+    "$oid": "698600bf3052d93d46472caa"
+  },
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f31722877d506abff962",
+  "checkInDate": "Feb 13, 2026, 12:00:00 AM",
+  "checkOutDate": "Feb 15, 2026, 12:00:00 AM",
+  "totalAmount": 150000,
+  "status": "completed",
+  "paymentStatus": "paid",
+  "occupancy": 2,
+  "notes": "",
+  "createdAt": "Feb 6, 2026, 8:24:55 PM",
+  "updatedAt": "Feb 6, 2026, 8:25:05 PM"
+},
+{
+  "_id": {
+    "$oid": "698600db3052d93d46472cac"
+  },
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f1d922877d506abff95f",
+  "checkInDate": "Feb 27, 2026, 12:00:00 AM",
+  "checkOutDate": "Feb 28, 2026, 12:00:00 AM",
+  "totalAmount": 25000,
+  "status": "accepted",
+  "paymentStatus": "paid",
+  "occupancy": 2,
+  "notes": "",
+  "createdAt": "Feb 6, 2026, 8:25:23 PM",
+  "updatedAt": "Feb 6, 2026, 8:25:33 PM"
+},
+{
+  "_id": {
+    "$oid": "698600fd3052d93d46472cae"
+  },
+  "guestId": "6983100f3ee752165054232c",
+  "roomId": "6985f0e522877d506abff95c",
+  "checkInDate": "Feb 27, 2026, 12:00:00 AM",
+  "checkOutDate": "Mar 1, 2026, 12:00:00 AM",
+  "totalAmount": 90000,
+  "status": "accepted",
+  "paymentStatus": "paid",
+  "occupancy": 2,
+  "notes": "",
+  "createdAt": "Feb 6, 2026, 8:25:57 PM",
+  "updatedAt": "Feb 6, 2026, 8:31:02 PM"
+}]
