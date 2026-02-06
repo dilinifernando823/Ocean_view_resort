@@ -4,8 +4,8 @@
         STAFF PANEL
     </div>
     <ul class="sidebar-menu">
-        <li class="${pageContext.request.requestURI.contains('dashboard.jsp') ? 'active' : ''}">
-            <a href="${pageContext.request.contextPath}/staff/dashboard.jsp">
+        <li class="${pageContext.request.requestURI.contains('dashboard') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/staff/dashboard">
                 <i class="fas fa-th-large"></i> Overview
             </a>
         </li>
@@ -14,19 +14,19 @@
                 <i class="fas fa-door-open"></i> Check-in / Out
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="${pageContext.request.requestURI.contains('cleaning-schedule') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/staff/cleaning-schedule">
                 <i class="fas fa-broom"></i> Room Cleaning
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-concierge-bell"></i> Housekeeping
+        <li class="${pageContext.request.requestURI.contains('guest-list') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/staff/guest-list">
+                <i class="fas fa-users"></i> Guest List
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-clipboard-list"></i> Bookings
+        <li class="${pageContext.request.requestURI.contains('help.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/staff/help.jsp">
+                <i class="fas fa-question-circle"></i> Staff Help
             </a>
         </li>
     </ul>
