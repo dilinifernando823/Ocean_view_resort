@@ -105,7 +105,7 @@
                                                         <c:set var="inv" value="${invoiceMap[res.id]}" />
                                                         <c:if test="${not empty inv}">
                                                             <a href="${pageContext.request.contextPath}/customer/invoice?id=${inv.id}" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; background: #e3f2fd; color: #1976d2; border-radius: 8px;">
-                                                                <i class="fas fa-file-invoice"></i> View Invoice
+                                                                <i class="fas fa-file-invoice"></i> Download Invoice
                                                             </a>
                                                         </c:if>
                                                         <span style="color: #28a745; font-weight: 600; font-size: 0.85rem;">
@@ -113,7 +113,7 @@
                                                         </span>
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <c:if test="${res.status == 'accepted'}">
+                                                        <c:if test="${res.status == 'accepted' || res.status == 'pending'}">
                                                             <a href="${pageContext.request.contextPath}/pay?reservationId=${res.id}" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">
                                                                 <i class="fas fa-credit-card"></i> Pay Now
                                                             </a>
