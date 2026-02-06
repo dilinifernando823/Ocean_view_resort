@@ -29,14 +29,14 @@
                 <i class="fas fa-calendar-alt"></i> Reservations
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-file-invoice-dollar"></i> Invoices
-            </a>
-        </li>
         <li class="${pageContext.request.requestURI.contains('reviews.jsp') ? 'active' : ''}">
             <a href="${pageContext.request.contextPath}/admin/reviews">
                 <i class="fas fa-star"></i> Reviews
+            </a>
+        </li>
+        <li class="${pageContext.request.requestURI.contains('help.jsp') ? 'active' : ''}">
+            <a href="${pageContext.request.contextPath}/admin/help.jsp">
+                <i class="fas fa-question-circle"></i> Admin Help
             </a>
         </li>
     </ul>
