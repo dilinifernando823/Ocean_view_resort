@@ -23,6 +23,7 @@ public class ProfileServlet extends HttpServlet {
     private ReservationDAO reservationDAO = new ReservationDAO();
     private RoomDAO roomDAO = new RoomDAO();
     private com.oceanview.dao.InvoiceDAO invoiceDAO = new com.oceanview.dao.InvoiceDAO();
+    private com.oceanview.dao.ReviewDAO reviewDAO = new com.oceanview.dao.ReviewDAO();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,6 +42,7 @@ public class ProfileServlet extends HttpServlet {
         // Fetch room details and invoices for each reservation
         Map<String, Room> roomMap = new HashMap<>();
         Map<String, com.oceanview.model.Invoice> invoiceMap = new HashMap<>();
+        Map<String, Boolean> reviewMap = new HashMap<>();
         
         for (Reservation res : reservations) {
             System.out.println("ProfileServlet: Processing Reservation " + res.getId() + " - Room ID: " + res.getRoomId());
@@ -57,11 +59,17 @@ public class ProfileServlet extends HttpServlet {
             if (inv != null) {
                 invoiceMap.put(res.getId(), inv);
             }
+            
+            // Check for existing review
+            if (reviewDAO.findByReservationId(res.getId()) != null) {
+                reviewMap.put(res.getId(), true);
+            }
         }
 
         request.setAttribute("reservations", reservations);
         request.setAttribute("roomMap", roomMap);
         request.setAttribute("invoiceMap", invoiceMap);
+        request.setAttribute("reviewMap", reviewMap);
         request.getRequestDispatcher("/profile.jsp").forward(request, response);
     }
 }

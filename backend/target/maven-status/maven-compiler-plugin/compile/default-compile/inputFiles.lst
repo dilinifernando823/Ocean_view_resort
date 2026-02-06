@@ -15,6 +15,7 @@ C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\CustomerInvoiceServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\CustomerRoomServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\DBConnectionServlet.java
+C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\HomeServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\InvoiceServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\LoginServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\LogoutServlet.java
@@ -24,6 +25,7 @@ C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\ReservationManagementServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\ReservationServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\ReviewManagementServlet.java
+C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\ReviewServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\RoomCategoryManagementServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\RoomManagementServlet.java
 C:\Users\Savi Aby\Desktop\dilini git\Ocean_view_resort\backend\src\main\java\com\oceanview\servlet\UpdateProfileServlet.java
