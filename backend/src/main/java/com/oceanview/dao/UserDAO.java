@@ -20,8 +20,11 @@ public class UserDAO extends BaseDAO<User> {
     public void save(User user) {
         Document doc = Document.parse(gson.toJson(user));
         if (user.getId() != null && !user.getId().isEmpty()) {
+            doc.remove("id");
             collection.replaceOne(Filters.eq("_id", new ObjectId(user.getId())), doc);
         } else {
+            doc.remove("id");
+            doc.remove("_id");
             collection.insertOne(doc);
             user.setId(doc.getObjectId("_id").toString());
         }
