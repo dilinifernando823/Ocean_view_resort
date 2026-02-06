@@ -86,6 +86,7 @@
                             <select name="status" class="form-control" required>
                                 <option value="available" ${roomToEdit.status == 'available' ? 'selected' : ''}>Available</option>
                                 <option value="booked" ${roomToEdit.status == 'booked' ? 'selected' : ''}>Booked</option>
+                                <option value="dirty" ${roomToEdit.status == 'dirty' ? 'selected' : ''}>Dirty</option>
                                 <option value="maintenance" ${roomToEdit.status == 'maintenance' ? 'selected' : ''}>Maintenance</option>
                                 <option value="unavailable" ${roomToEdit.status == 'unavailable' ? 'selected' : ''}>Unavailable</option>
                             </select>

@@ -63,6 +63,9 @@
                                         <c:when test="${room.status == 'booked'}">
                                             <span class="badge badge-warning">Booked</span>
                                         </c:when>
+                                        <c:when test="${room.status == 'dirty'}">
+                                            <span class="badge badge-info">Dirty</span>
+                                        </c:when>
                                         <c:when test="${room.status == 'maintenance'}">
                                             <span class="badge badge-danger">Maintenance</span>
                                         </c:when>
