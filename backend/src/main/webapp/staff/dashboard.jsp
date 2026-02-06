@@ -3,10 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-- Redirect to Servlet if data is missing --%>
-    <c:if test="${empty checkInsCount}">
-        <c:redirect url="/staff/dashboard"/>
-    </c:if>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard | Ocean View Resort</title>
