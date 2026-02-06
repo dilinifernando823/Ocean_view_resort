@@ -145,6 +145,15 @@
                                 <div style="text-align: center; color: #888;">No further actions available for this status.</div>
                             </c:otherwise>
                         </c:choose>
+                        
+                        <%-- Permanent Delete Option --%>
+                        <div style="margin-top: 2rem; border-top: 1px solid #eee; text-align: center; padding-top: 1.5rem;">
+                            <a href="${pageContext.request.contextPath}/admin/reservations?action=delete&id=${res.id}" 
+                               style="color: #e74c3c; font-size: 0.9rem; text-decoration: none; font-weight: 600;"
+                               onclick="return confirm('WARNING: This will permanently delete this reservation record. Continue?')">
+                                <i class="fas fa-trash-alt"></i> Delete Reservation Permanently
+                            </a>
+                        </div>
                     </div>
                 </div>
 
