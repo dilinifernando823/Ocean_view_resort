@@ -1604,3 +1604,15 @@
 0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:13:17 +0530] "GET /contact.jsp HTTP/1.1" 200 6514 http-bio-8085-exec-7 1
 0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:13:18 +0530] "GET /help.jsp HTTP/1.1" 200 6642 http-bio-8085-exec-7 2
 0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:13:20 +0530] "GET /login.jsp HTTP/1.1" 200 4078 http-bio-8085-exec-7 11
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:11 +0530] "GET /index.jsp HTTP/1.1" 302 - http-bio-8085-exec-1 123
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /home HTTP/1.1" 200 26147 http-bio-8085-exec-3 527
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/about_header.png HTTP/1.1" 304 - http-bio-8085-exec-4 6
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/categories/68d890aa-fc4a-435e-8629-78373f4d42c0_download.jpg HTTP/1.1" 304 - http-bio-8085-exec-5 5
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/dbdfb4d1-3cd1-4d3a-b283-973762bc823e_The%20Bodrum%20EDITION%20_%20Boutique%20Luxury%20Bodrum%20Hotel.jpg HTTP/1.1" 304 - http-bio-8085-exec-2 5
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/b54761fb-3a3d-414c-a0a8-42a988abaa80_666777.jpg HTTP/1.1" 304 - http-bio-8085-exec-6 6
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/3214da56-99b4-4f2b-9e7d-d40d62335afe_Elegant%20Loft%20Bedroom%20with%20Skyline%20View.jpg HTTP/1.1" 304 - http-bio-8085-exec-7 5
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/c034ed80-d0c0-4bc8-9ea3-3e3c59c3a069_Skyline%20Splendor%20-%20with%20a%20mesmerizing%20view%20of%20the%20city%20skyline%20from%20my%20hotel%20room.jpg HTTP/1.1" 304 - http-bio-8085-exec-8 9
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/b439a1c9-4b94-4780-a1df-e56b408042bc_77777777.jpg HTTP/1.1" 304 - http-bio-8085-exec-9 7
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:12 +0530] "GET /assets/uploads/rooms/37f1432d-97c6-43e9-9335-66297e90c9b8_download%20(4).jpg HTTP/1.1" 304 - http-bio-8085-exec-6 3
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:14 +0530] "GET /login.jsp HTTP/1.1" 200 4078 http-bio-8085-exec-6 16
+0:0:0:0:0:0:0:1 - - [06/Feb/2026:21:18:19 +0530] "POST /login HTTP/1.1" 200 4295 http-bio-8085-exec-6 13
