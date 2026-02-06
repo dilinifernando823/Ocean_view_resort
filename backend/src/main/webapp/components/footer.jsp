@@ -12,6 +12,7 @@
                 <li><a href="${pageContext.request.contextPath}/about.jsp">About Us</a></li>
                 <li><a href="${pageContext.request.contextPath}/rooms.jsp">Our Rooms</a></li>
                 <li><a href="${pageContext.request.contextPath}/contact.jsp">Contact</a></li>
+                <li><a href="${pageContext.request.contextPath}/help.jsp">Help & FAQ</a></li>
             </ul>
         </div>
         <div class="footer-col">

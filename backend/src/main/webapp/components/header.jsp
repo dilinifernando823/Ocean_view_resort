@@ -7,6 +7,7 @@
         <li><a href="${pageContext.request.contextPath}/about.jsp">About</a></li>
         <li><a href="${pageContext.request.contextPath}/rooms">Rooms</a></li>
         <li><a href="${pageContext.request.contextPath}/contact.jsp">Contact</a></li>
+        <li><a href="${pageContext.request.contextPath}/help.jsp">Help</a></li>
     </ul>
     <div class="auth-icons">
         <c:choose>
