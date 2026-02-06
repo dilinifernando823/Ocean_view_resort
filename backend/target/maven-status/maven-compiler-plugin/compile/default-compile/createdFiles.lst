@@ -6,6 +6,7 @@ com\oceanview\model\Reservation.class
 com\oceanview\servlet\LoginServlet.class
 com\oceanview\model\RoomCategory.class
 com\oceanview\servlet\InvoiceServlet.class
+com\oceanview\servlet\StaffCleaningServlet.class
 com\oceanview\dao\UserDAO.class
 com\oceanview\servlet\CustomerRoomServlet.class
 com\oceanview\dao\BaseDAO.class
@@ -27,7 +28,9 @@ com\oceanview\servlet\ReservationManagementServlet.class
 com\oceanview\util\EmailUtil$1.class
 com\oceanview\dao\RoomCategoryDAO.class
 com\oceanview\servlet\ReservationServlet.class
+com\oceanview\servlet\StaffGuestListServlet.class
 com\oceanview\servlet\ReviewServlet.class
+com\oceanview\servlet\RoomStatusServlet.class
 com\oceanview\servlet\DBConnectionServlet.class
 com\oceanview\dao\RoomDAO.class
 com\oceanview\model\User.class

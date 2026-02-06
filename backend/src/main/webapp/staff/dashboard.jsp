@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%-- Redirect to Servlet if data is missing --%>
+    <c:if test="${empty checkInsCount}">
+        <c:redirect url="/staff/dashboard"/>
+    </c:if>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard | Ocean View Resort</title>
@@ -36,7 +40,7 @@
                     </div>
                     <div class="stat-details">
                         <h3>Today's Check-ins</h3>
-                        <span>8</span>
+                        <span>${checkInsCount}</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -45,7 +49,7 @@
                     </div>
                     <div class="stat-details">
                         <h3>Today's Check-outs</h3>
-                        <span>5</span>
+                        <span>${checkOutsCount}</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -53,58 +57,71 @@
                         <i class="fas fa-concierge-bell"></i>
                     </div>
                     <div class="stat-details">
-                        <h3>Requests</h3>
-                        <span>3</span>
+                        <h3>Pending Requests</h3>
+                        <span>${pendingRequestsCount}</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #ffebee; color: #c62828;">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Dirty Rooms</h3>
+                        <span>${dirtyRoomsCount}</span>
                     </div>
                 </div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem;">
                 <div class="data-table-container">
-                    <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Room Cleaning Status</h3>
+                    <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Rooms Needing Attention</h3>
                     <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Room</th>
-                                <th>Type</th>
                                 <th>Status</th>
-                                <th>Task</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>101</td>
-                                <td>Standard</td>
-                                <td><span class="badge badge-danger">Dirty</span></td>
-                                <td><button class="btn btn-primary" style="font-size: 0.7rem;">Clean</button></td>
-                            </tr>
-                            <tr>
-                                <td>102</td>
-                                <td>Deluxe</td>
-                                <td><span class="badge badge-warning">Cleaning</span></td>
-                                <td><button class="btn" style="font-size: 0.7rem; background: #eee;">Finish</button></td>
-                            </tr>
-                            <tr>
-                                <td>105</td>
-                                <td>Suite</td>
-                                <td><span class="badge badge-success">Available</span></td>
-                                <td>-</td>
-                            </tr>
+                            <c:forEach items="${dirtyRooms}" var="room">
+                                <tr>
+                                    <td>
+                                        <strong>${room.roomName}</strong><br>
+                                        <span style="font-size: 0.8rem; color: #888;">Room #${room.roomNumber}</span>
+                                    </td>
+                                    <td><span class="badge badge-danger">Dirty</span></td>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/staff/update-room-status?id=${room.id}&status=available" class="btn btn-primary" style="font-size: 0.7rem; padding: 0.3rem 0.8rem;">Mark Ready</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            <c:if test="${empty dirtyRooms}">
+                                <tr><td colspan="3" style="text-align: center; color: #888;">No rooms currently marked for cleaning.</td></tr>
+                            </c:if>
                         </tbody>
                     </table>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="${pageContext.request.contextPath}/staff/cleaning-schedule" class="btn" style="font-size: 0.8rem; background: #eee; color: #333;">View Full Schedule</a>
+                    </div>
                 </div>
 
                 <div class="data-table-container">
-                    <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Quick Arrival List</h3>
+                    <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Quick Arrival List (Today)</h3>
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="padding: 1rem; border-left: 4px solid var(--secondary-color); background: #f9f9f9; border-radius: 4px;">
-                            <div style="font-weight: 600;">Peter Parker</div>
-                            <div style="font-size: 0.8rem; color: #666;">Room 204 | Time: 2:00 PM</div>
-                        </div>
-                        <div style="padding: 1rem; border-left: 4px solid var(--secondary-color); background: #f9f9f9; border-radius: 4px;">
-                            <div style="font-weight: 600;">Tony Stark</div>
-                            <div style="font-size: 0.8rem; color: #666;">Room 501 | Time: 4:30 PM</div>
-                        </div>
+                        <c:forEach items="${todaysArrivals}" var="res">
+                            <div style="padding: 1rem; border-left: 4px solid var(--secondary-color); background: #f9f9f9; border-radius: 4px;">
+                                <div style="font-weight: 600;">Guest ID: ${res.guestId}</div>
+                                <div style="font-size: 0.8rem; color: #666;">
+                                    Res #${res.id} | ${res.occupancy} Guests
+                                </div>
+                            </div>
+                        </c:forEach>
+                        <c:if test="${empty todaysArrivals}">
+                            <div style="padding: 1rem; text-align: center; color: #888; font-style: italic;">
+                                No check-ins scheduled for today.
+                            </div>
+                        </c:if>
                     </div>
                 </div>
             </div>
