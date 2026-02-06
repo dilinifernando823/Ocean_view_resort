@@ -9,11 +9,6 @@
                 <i class="fas fa-th-large"></i> Overview
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-door-open"></i> Check-in / Out
-            </a>
-        </li>
         <li class="${pageContext.request.requestURI.contains('cleaning-schedule') ? 'active' : ''}">
             <a href="${pageContext.request.contextPath}/staff/cleaning-schedule">
                 <i class="fas fa-broom"></i> Room Cleaning
