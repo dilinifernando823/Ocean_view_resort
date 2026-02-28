@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.oceanview.model.User;
+import com.oceanview.util.GsonUtil;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO extends BaseDAO<User> {
-    private final Gson gson = new Gson();
+    private final Gson gson = GsonUtil.getGson();
 
     public UserDAO() {
         super("users");
