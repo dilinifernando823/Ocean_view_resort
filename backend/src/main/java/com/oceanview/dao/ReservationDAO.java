@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.oceanview.model.Reservation;
+import com.oceanview.util.GsonUtil;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservationDAO extends BaseDAO<Reservation> {
-    private final Gson gson = new Gson();
+    private final Gson gson = GsonUtil.getGson();
 
     public ReservationDAO() {
         super("reservations");
@@ -64,10 +65,10 @@ public class ReservationDAO extends BaseDAO<Reservation> {
         res.setRoomId(doc.getString("roomId"));
         res.setCheckInDate(getDateSafely(doc, "checkInDate"));
         res.setCheckOutDate(getDateSafely(doc, "checkOutDate"));
-        res.setTotalAmount(doc.getDouble("totalAmount"));
+        res.setTotalAmount(getDoubleSafely(doc, "totalAmount", 0.0));
         res.setStatus(doc.getString("status")); // pending, accepted, rejected, cancelled
         res.setPaymentStatus(doc.getString("paymentStatus")); // unpaid, paid
-        res.setOccupancy(doc.getInteger("occupancy", 0));
+        res.setOccupancy(getIntegerSafely(doc, "occupancy", 0));
         res.setNotes(doc.getString("notes"));
         res.setCreatedAt(getDateSafely(doc, "createdAt"));
         res.setUpdatedAt(getDateSafely(doc, "updatedAt"));

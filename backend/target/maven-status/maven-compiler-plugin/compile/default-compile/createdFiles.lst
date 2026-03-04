@@ -1,5 +1,6 @@
 com\oceanview\util\EmailUtil.class
 com\oceanview\dao\ReservationDAO.class
+com\oceanview\servlet\AdminDashboardServlet.class
 com\oceanview\servlet\ProfileServlet.class
 com\oceanview\servlet\RoomManagementServlet.class
 com\oceanview\model\Reservation.class
@@ -24,6 +25,7 @@ com\oceanview\dao\InvoiceDAO.class
 com\oceanview\model\Room.class
 com\oceanview\servlet\ContactServlet.class
 com\oceanview\servlet\RoomCategoryManagementServlet.class
+com\oceanview\util\GsonDateAdapter.class
 com\oceanview\servlet\ReservationManagementServlet.class
 com\oceanview\util\EmailUtil$1.class
 com\oceanview\dao\RoomCategoryDAO.class
@@ -36,3 +38,5 @@ com\oceanview\dao\RoomDAO.class
 com\oceanview\model\User.class
 com\oceanview\util\MongoDBConnection.class
 com\oceanview\servlet\HomeServlet.class
+com\oceanview\servlet\StaffDashboardServlet.class
+com\oceanview\util\GsonUtil.class

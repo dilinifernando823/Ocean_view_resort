@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.oceanview.model.Invoice;
+import com.oceanview.util.GsonUtil;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InvoiceDAO extends BaseDAO<Invoice> {
-    private final Gson gson = new Gson();
+    private final Gson gson = GsonUtil.getGson();
 
     public InvoiceDAO() {
         super("invoices");
@@ -57,7 +58,7 @@ public class InvoiceDAO extends BaseDAO<Invoice> {
         inv.setReservationId(doc.getString("reservationId"));
         inv.setGuestId(doc.getString("guestId"));
         inv.setInvoiceNumber(doc.getString("invoiceNumber"));
-        inv.setAmount(doc.getDouble("amount"));
+        inv.setAmount(getDoubleSafely(doc, "amount", 0.0));
         inv.setInvoicedAt(getDateSafely(doc, "invoicedAt"));
         inv.setCreatedAt(getDateSafely(doc, "createdAt"));
         inv.setUpdatedAt(getDateSafely(doc, "updatedAt"));

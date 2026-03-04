@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.oceanview.model.Room;
+import com.oceanview.util.GsonUtil;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RoomDAO extends BaseDAO<Room> {
-    private final Gson gson = new Gson();
+    private final Gson gson = GsonUtil.getGson();
 
     public RoomDAO() {
         super("rooms");

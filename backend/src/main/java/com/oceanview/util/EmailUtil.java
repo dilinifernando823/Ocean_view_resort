@@ -9,8 +9,10 @@ public class EmailUtil {
     // These should ideally be in a config file or env variables
     private static final String SMTP_HOST = "sandbox.smtp.mailtrap.io";
     private static final String SMTP_PORT = "2525";
-    private static final String USERNAME = "23e575503bd17b";
-    private static final String PASSWORD = "6f1b21f8e60876";
+    private static final String USERNAME = "99c63a28445855";
+    private static final String PASSWORD = "26123a2f93899c";
+
+  
 
     public static void sendEmail(String to, String subject, String body) {
         Properties props = new Properties();

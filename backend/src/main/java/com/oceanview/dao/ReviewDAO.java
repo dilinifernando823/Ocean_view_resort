@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.oceanview.model.Review;
+import com.oceanview.util.GsonUtil;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReviewDAO extends BaseDAO<Review> {
-    private final Gson gson = new Gson();
+    private final Gson gson = GsonUtil.getGson();
 
     public ReviewDAO() {
         super("reviews");
@@ -54,9 +55,9 @@ public class ReviewDAO extends BaseDAO<Review> {
         review.setReservationId(doc.getString("reservationId"));
         review.setGuestId(doc.getString("guestId"));
         review.setRoomId(doc.getString("roomId"));
-        review.setRating(doc.getInteger("rating", 0));
+        review.setRating(getIntegerSafely(doc, "rating", 0));
         review.setFeedback(doc.getString("feedback"));
-        review.setIsActive(doc.getInteger("isActive", 1));
+        review.setIsActive(getIntegerSafely(doc, "isActive", 1));
         review.setCreatedAt(getDateSafely(doc, "createdAt"));
         review.setUpdatedAt(getDateSafely(doc, "updatedAt"));
         return review;
