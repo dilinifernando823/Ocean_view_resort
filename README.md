@@ -221,11 +221,11 @@ Controller: Servlets
 
 ## 📸 System Screenshots
 ### 🏠 Home Page – Glassmorphism UI
-backend\src\main\webapp\assets\uploads\screenshots\home.png
+![Homepage Screenshot](backend\src\main\webapp\assets\uploads\screenshots\home.png)
 ### 📊 Admin Dashboard – Real-Time Analytics
-backend\src\main\webapp\assets\uploads\screenshots\dashboard.png
+![Admin dashboard Screenshot](backend\src\main\webapp\assets\uploads\screenshots\dashboard.png)
 ### 🛏️ Room Details – Dynamic Rendering
-backend\src\main\webapp\assets\uploads\screenshots\room-details.png
+![Room Details](backend\src\main\webapp\assets\uploads\screenshots\room-details.png)
 ### Development Setup for Contributors
 -   Ensure you have all [Prerequisites](#prerequisites) installed.
 -   Follow the [Installation](#installation) and [Running](#running-the-backend) steps for both frontend and backend.
